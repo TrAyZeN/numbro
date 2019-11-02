@@ -5,7 +5,8 @@ class NumberInput extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-      value: ""
+      value: "",
+      invalidInput: false
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -18,10 +19,10 @@ class NumberInput extends React.PureComponent {
 
   handleSubmit(event) {
     if (this.validateInput(this.state.value)) {
+      this.setState({ invalidInput: false });
       this.dispatch.updateNumber(Number.parseInt(this.state.value));
     } else {
-      // TODO: show that the input is not valid
-      console.log("Sorry but your input is not valid");
+      this.setState({ invalidInput: true });
     }
 
     // prevent page reload of the input submit
@@ -35,7 +36,9 @@ class NumberInput extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <div
+        className="NumberInput"
+      >
         <form
           className="NumberInput-form"
           onSubmit={this.handleSubmit}
@@ -53,6 +56,18 @@ class NumberInput extends React.PureComponent {
             className="NumberInput-submit"
           />
         </form>
+
+        { this.state.invalidInput
+          ? <p
+              className="NumberInput-invalidInput"
+            >
+              Invalid input, you have to submit a natural number
+            </p>
+          : <p
+              className="NumberInput-invalidInput hidden"
+            >
+              Invalid input, you have to submit a natural number
+            </p> }
       </div>
     );
   }
