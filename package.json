@@ -3,6 +3,7 @@
   "description": "A website that shows you number properties",
   "version": "0.1.0",
   "author": "TrAyZeN",
+  "license": "MIT",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.11.0",
