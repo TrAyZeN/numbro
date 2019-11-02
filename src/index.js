@@ -4,22 +4,24 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
-import { isEven, isPrime, isPerfectSquare, computeAbundance } from './math.js';
+import { formatIsEven, formatIsPrime, formatIsPerfectSquare, formatAbundance, formatIsNarcissistic } from './math.js';
 
 setGlobal({
     number: null,
-    even: false,
-    prime: false,
-    perfectSquare: false,
-    abundance: null
+    even: "",
+    prime: "",
+    perfectSquare: "",
+    abundance: "",
+    narcissistic: ""
 });
 
 addReducer('updateNumber', (global, dispatch, n=0) => ({
     number: n,
-    even: isEven(n),
-    prime: isPrime(n),
-    perfectSquare: isPerfectSquare(n),
-    abundance: computeAbundance(n)
+    even: formatIsEven(n),
+    prime: formatIsPrime(n),
+    perfectSquare: formatIsPerfectSquare(n),
+    abundance: formatAbundance(n),
+    narcissistic: formatIsNarcissistic(n)
 }));
 
 ReactDOM.render(<App />, document.getElementById('root'));

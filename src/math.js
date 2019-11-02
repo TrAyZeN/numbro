@@ -1,8 +1,8 @@
-export const isEven = (n) => {
+const isEven = (n) => {
     return n%2 === 0;
 }
 
-export const isPrime = (n) => {
+const isPrime = (n) => {
     if (n < 2)
         return false;
 
@@ -13,19 +13,8 @@ export const isPrime = (n) => {
     return true;
 }
 
-export const isPerfectSquare = (n) => {
+const isPerfectSquare = (n) => {
     return Math.sqrt(n)%1 === 0;
-}
-
-const sumOfDivisors = (n) => {
-    let s = 1;
-
-    for (let d = 2; d <= n; d++) {
-        if (n%d === 0)
-            s += d;
-    }
-
-    return s;
 }
 
 const aliquotSum = (n) => {
@@ -39,15 +28,11 @@ const aliquotSum = (n) => {
     return s;
 }
 
-export const computeAbundance = (n) => {
+const computeAbundance = (n) => {
     return aliquotSum(n) - n;
 }
 
-const computeDeficiency = (n) => {
-    return n - aliquotSum(n);
-}
-
-export const isNaricissitic = (n) => {
+const isNarcissistic = (n) => {
     let p = Math.floor(Math.log10(n)) + 1;
     let s = 0;
 
@@ -56,6 +41,41 @@ export const isNaricissitic = (n) => {
     }
 
     return s === n;
+}
+
+const formatYesNo = (p) => {
+    return isEven(p) ? "Yes" : "No";
+}
+
+export const formatIsEven = (n) => {
+    return formatYesNo(isEven(n));
+}
+
+export const formatIsPrime = (n) => {
+    return formatYesNo(isPrime(n));
+}
+
+export const formatIsPerfectSquare = (n) => {
+    return formatYesNo(isPerfectSquare(n));
+}
+
+export const formatAbundance = (n) => {
+    let a = computeAbundance(n);
+
+    if (a === 0)
+        return `${a} (perfect)`;
+    else if (a === 1)
+        return `${a} (quasiperfect)`;
+    else if (a === -1)
+        return `${a} (almost perfect)`;
+    else if (a > 0)
+        return `${a} (abundant)`;
+    else if (a < 0)
+        return `${a} (deficient)`;
+}
+
+export const formatIsNarcissistic = (n) => {
+    return formatYesNo(isNarcissistic(n));
 }
 
 /*
