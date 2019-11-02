@@ -1,25 +1,23 @@
-import React from 'react';
+import React from 'reactn';
 import './style.scss';
 import NumberInput from '../NumberInput/NumberInput';
 import PropertiesTable from '../PropertiesTable/PropertiesTable';
 
-class App extends React.Component {
+class App extends React.PureComponent {
   render () {
     return (
       <div className="App">
         <header className="App-header">
 
-          <h1>
+          <h1 className="App-title">
             Numbro
           </h1>
 
-          <p>
-            Enter a number
-          </p>
-          
           <NumberInput />
 
-          <PropertiesTable />
+          { this.global.number !== null
+            ? <PropertiesTable />
+            : null }
 
         </header>
       </div>
