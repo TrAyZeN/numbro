@@ -1,9 +1,24 @@
-table, td {
-    border-collapse: collapse;
-    border: 1px solid black;
+table {
+    margin: 0 auto;
+
+    border: 2px solid black;
+    border-collapse: separate;
+    border-radius: 6px;
+    border-spacing: 0px;
 }
 
-// th, td {
-//     border-bottom: 1px solid black;
-// }
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
 
+th, td {
+    padding: 5px 4px 6px 4px;
+    text-align: left;
+    vertical-align: top;
+}
+
+td:first-child {
+    border-right: 2px solid black;
+}
