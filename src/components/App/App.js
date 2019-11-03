@@ -10,7 +10,7 @@ class App extends React.PureComponent {
         <header className="App-header">
 
           <h1 className="App-title">
-            Numbro
+            <a href="/">Numbro</a>
           </h1>
 
           <NumberInput />
