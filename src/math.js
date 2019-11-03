@@ -44,7 +44,7 @@ const isNarcissistic = (n) => {
 }
 
 const formatYesNo = (p) => {
-    return isEven(p) ? "Yes" : "No";
+    return p ? "Yes" : "No";
 }
 
 export const formatIsEven = (n) => {
