@@ -7,23 +7,43 @@ class PropertiesTable extends React.PureComponent {
       <table>
         <tbody>
           <tr>
-            <td>Even</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Parity_(mathematics)">
+                Even
+              </a>
+            </td>
             <td>{this.global.even}</td>
           </tr>
           <tr>
-            <td>Prime</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Prime_number">
+              Prime
+              </a>
+            </td>
             <td>{this.global.prime}</td>
           </tr>
           <tr>
-            <td>Perfect square</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Perfect_square">
+                Perfect square
+              </a>
+            </td>
             <td>{this.global.perfectSquare}</td>
           </tr>
           <tr>
-            <td>Abundance</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Abundant_number">
+                Abundance
+              </a>
+            </td>
             <td>{this.global.abundance}</td>
           </tr>
           <tr>
-            <td>Narcissistic</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Narcissistic_number">
+                Narcissistic
+              </a>
+            </td>
             <td>{this.global.narcissistic}</td>
           </tr>
         </tbody>
