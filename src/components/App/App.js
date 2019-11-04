@@ -1,7 +1,7 @@
 import React from 'reactn';
 import './style.scss';
-import NumberInput from '../NumberInput/NumberInput';
-import PropertiesTable from '../PropertiesTable/PropertiesTable';
+import NumberInput from '../NumberInput';
+import PropertiesTable from '../PropertiesTable';
 
 class App extends React.PureComponent {
   render () {
