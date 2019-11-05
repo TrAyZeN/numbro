@@ -9,6 +9,20 @@
 
 .App-title {
   font-size: 400%;
+  margin-bottom: 1vmin;
+}
+
+.App-quote {
+  width: 60%;
+  margin: 0 auto;
+  font-style: italic;
+  font-size: calc(5px + 1.5vmin);
+}
+
+.App-quote-author {
+  margin-left: 30%;
+  margin-top: 0;
+  font-size: calc(5px + 2vmin);
 }
 
 a {

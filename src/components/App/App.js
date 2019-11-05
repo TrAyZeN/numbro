@@ -13,6 +13,18 @@ class App extends React.PureComponent {
             <a href="/">Numbro</a>
           </h1>
 
+          <p className="App-quote">
+            Why are numbers beautiful?
+            It’s like asking why is Beethoven’s Ninth Symphony beautiful.
+            If you don’t see why, someone can’t tell you.
+            I know numbers are beautiful.
+            If they aren’t beautiful, nothing is.
+          </p>
+
+          <p className="App-quote-author">
+            - Paul Erdős
+          </p>
+
           <NumberInput />
 
           { this.global.number !== null
