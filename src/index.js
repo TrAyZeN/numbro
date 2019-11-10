@@ -4,7 +4,10 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
-import { formatIsEven, formatIsPrime, formatIsPerfectSquare, formatAbundance, formatIsNarcissistic } from './math.js';
+import {
+    formatIsEven, formatIsPrime, formatIsPerfectSquare,
+    formatAbundance, formatIsNarcissistic, formatIsEvil,
+    formatIsEmirp, formatIsNiven } from './math.js';
 
 setGlobal({
     number: null,
@@ -12,7 +15,10 @@ setGlobal({
     prime: "",
     perfectSquare: "",
     abundance: "",
-    narcissistic: ""
+    narcissistic: "",
+    evil: "",
+    emirp: "",
+    niven: ""
 });
 
 addReducer('updateNumber', (global, dispatch, n=0) => ({
@@ -21,7 +27,10 @@ addReducer('updateNumber', (global, dispatch, n=0) => ({
     prime: formatIsPrime(n),
     perfectSquare: formatIsPerfectSquare(n),
     abundance: formatAbundance(n),
-    narcissistic: formatIsNarcissistic(n)
+    narcissistic: formatIsNarcissistic(n),
+    evil: formatIsEvil(n),
+    emirp: formatIsEmirp(n),
+    niven: formatIsNiven(n)
 }));
 
 ReactDOM.render(<App />, document.getElementById('root'));

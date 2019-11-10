@@ -46,6 +46,30 @@ class PropertiesTable extends React.PureComponent {
             </td>
             <td>{this.global.narcissistic}</td>
           </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Evil_number">
+                Evil
+              </a>
+            </td>
+            <td>{this.global.evil}</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Emirp">
+                Emirp
+              </a>
+            </td>
+            <td>{this.global.emirp}</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Harshad_number">
+                Niven
+              </a>
+            </td>
+            <td>{this.global.niven}</td>
+          </tr>
         </tbody>
       </table>
     );
