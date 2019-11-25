@@ -142,7 +142,6 @@ pentagonal
 hexagonal
 
 emirp
-niven
 ordinal
 pernicious
 quine

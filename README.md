@@ -3,9 +3,13 @@
 </h1>
 
 > A website that shows you number properties
-<!-- <div align="center">
+<div align="center">
     <img src="assets/image.png"/>
-</div> -->
+</div>
+
+numbro is a simple website made using reactjs that shows you
+number theory properties of the number you want. The properties are
+directly verified client side.
 
 ## Requirements
 - [Node.js](https://nodejs.org/)
