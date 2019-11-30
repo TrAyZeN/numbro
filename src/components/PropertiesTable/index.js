@@ -70,6 +70,14 @@ class PropertiesTable extends React.PureComponent {
             </td>
             <td>{this.global.niven}</td>
           </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Factorial">
+                Factorial
+              </a>
+            </td>
+            <td>{this.global.factorial}</td>
+          </tr>
         </tbody>
       </table>
     );

@@ -16,7 +16,7 @@ const isPrime = (n) => {
     if (n < 2)
         return false;
 
-    if (n == 2)
+    if (n === 2)
         return true;
 
     for (let d = 3; d <= Math.sqrt(n); d+=2) {
@@ -66,7 +66,7 @@ const isEvil = (n) => {
 
 // TODO
 const isEmirp = (n) => {
-    let p = Math.floor(Math.log10(n));
+    //let p = Math.floor(Math.log10(n));
     let s = 0;  // reversed of n
 
     return isPrime(n) && isPrime(s);
@@ -77,6 +77,14 @@ const isEmirp = (n) => {
  */
 const isNiven = (n) => {
     return n%digitSum(n) === 0;
+}
+
+const isFactorial = (n) => {
+    let i = 2;
+    while (Number.isInteger(n) && n !== 1)
+        n /= i++;
+
+    return n === 1;
 }
 
 const digitSum = (n) => {
@@ -133,9 +141,11 @@ export const formatIsNiven = (n) => {
     return formatYesNo(isNiven(n));
 }
 
+export const formatIsFactorial = (n) => {
+    return formatYesNo(isFactorial(n));
+}
+
 /*
-factorial
-composite (not prime)
 
 triangular
 pentagonal
@@ -144,5 +154,5 @@ hexagonal
 emirp
 ordinal
 pernicious
-quine
+happy
 */

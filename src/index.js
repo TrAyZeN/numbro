@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import {
     formatIsEven, formatIsPrime, formatIsPerfectSquare,
     formatAbundance, formatIsNarcissistic, formatIsEvil,
-    formatIsEmirp, formatIsNiven } from './math.js';
+    formatIsEmirp, formatIsNiven, formatIsFactorial } from './math.js';
 
 setGlobal({
     number: null,
@@ -18,7 +18,8 @@ setGlobal({
     narcissistic: "",
     evil: "",
     emirp: "",
-    niven: ""
+    niven: "",
+    factorial: ""
 });
 
 addReducer('updateNumber', (global, dispatch, n=0) => ({
@@ -30,7 +31,8 @@ addReducer('updateNumber', (global, dispatch, n=0) => ({
     narcissistic: formatIsNarcissistic(n),
     evil: formatIsEvil(n),
     emirp: formatIsEmirp(n),
-    niven: formatIsNiven(n)
+    niven: formatIsNiven(n),
+    factorial: formatIsFactorial(n)
 }));
 
 ReactDOM.render(<App />, document.getElementById('root'));
