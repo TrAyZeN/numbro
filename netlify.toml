@@ -1,6 +1,6 @@
 [build]
-  base = "."
-  publish =  "./build/"
+  base = "numbro"
+  publish =  "numbro/build/"
   command = "yarn build"
   [build.processing]
     skip_processing = false
