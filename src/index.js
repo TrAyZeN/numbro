@@ -1,6 +1,6 @@
 import React from 'react';
 import { setGlobal, addReducer } from 'reactn';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.scss';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
@@ -35,7 +35,8 @@ addReducer('updateNumber', (global, dispatch, n=0) => ({
     factorial: formatIsFactorial(n)
 }));
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
+root.render(<App />, );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
